@@ -45,13 +45,14 @@ def test_buy():
         auth = Aut_and_reg(browser)
 
     with allure.step("Вызвать метод для авторизации"):    
-        auth.auth_by_mail(mail="malalfred", password="jvp+XTdf3Esmjtz")
+        auth.auth_by_mail(mail="Your mail", password="your password")
 
     with allure.step("Передать браузер в конструктор класса Buy_subscrib"):
         buy = Buy_subscribe(browser)
 
     with allure.step("Вызвать метод для добавления карты"):
-        buy.add_card(card_number="5469 0600 2526 4331", data="10 25", cvc="947")
+        buy.add_card(card_number="0000 0000 0000 0000", data="ММ/гг", cvc="000")
+
 
 @allure.title("Авторизация пользователя")
 @allure.description("Тест выполняет авторизацию пользователя")

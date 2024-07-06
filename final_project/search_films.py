@@ -15,19 +15,18 @@ class Search_films_and_TV_series:
         
         with allure.step("Ввести в поле поиска название фильма"):
             self.browser.find_element(By.CSS_SELECTOR, 'input[role="combobox"]').send_keys(films)
-            sleep(2)
+            
     
         with allure.step("Нажать кнопку 'Поиск'"):
             self.browser.find_element(By.CSS_SELECTOR, 'button[data-tid="f49ca51f"]').send_keys(keys.Keys.ENTER)
-            sleep(2)
+            
 
         with allure.step("Кликнуть по нужному фильму"):
             self.browser.find_element(By.CSS_SELECTOR, 'a[href="/film/5388902/sr/1/"]').click()
-            sleep(2)
+            
 
         with allure.step("Нажать кнопку 'Смотреть'"):
             self.browser.find_element(By.CSS_SELECTOR, 'a[data-test-id="Watch"]').click()
-            sleep(20)
                
 # # поиск фильмов 
 # # ввод названия 

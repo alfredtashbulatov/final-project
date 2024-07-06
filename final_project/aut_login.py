@@ -40,28 +40,28 @@ class Aut_and_reg:
     def auth_by_mail(self, mail, password):
         with allure.step("Клик по кнопке 'Войти'"):
             self.browser.find_element(By.CSS_SELECTOR, 'button[class="ZbVGA14bTNo86weQTABU"]').click()
-            sleep(2)
+            
 
         with allure.step("Ввести в поле 'mail' почтовый адресс"):    
             self.browser.find_element(By.CSS_SELECTOR, 'input[id="passp-field-login"]').send_keys(mail)
-            sleep(1)
+            
 
 
         with allure.step("Кликнуть по кнопке 'Войти'"): 
             self.browser.find_element(By.CSS_SELECTOR, 'button[id="passp:sign-in"]').click()
-            sleep(1)
+            
 
 
         with allure.step("Выбрать способ входа. (По паролю)"): 
             self.browser.find_element(By.CSS_SELECTOR,'button[data-t="button:pseudo"]').click()
-            sleep(2)
+            
 
 
         with allure.step("Ввести в поле 'password' пароль "): 
             self.browser.find_element(By.CSS_SELECTOR, 'input[id="passp-field-passwd"]').send_keys(password)
-            sleep(2) 
+            
 
 
         with allure.step("Кликнуть по кнопке 'продолжить'"): 
             self.browser.find_element(By.CSS_SELECTOR, 'button[id="passp:sign-in"]').click()
-            sleep(5)
+            
