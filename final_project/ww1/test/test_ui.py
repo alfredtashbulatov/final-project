@@ -23,6 +23,7 @@ def test_search_films():
     with allure.step("Вызвать метод для поиска"): 
         search.search_content(films="на автомате")
 
+
 @allure.title("Поиск с пустым полем ввода")
 @allure.description("Тест проверяет поиск фильма(сериала) при тустом поле ввода")
 @allure.severity(allure.severity_level.BLOCKER)
@@ -38,6 +39,7 @@ def test_search_zero_data():
         search.search_content_zero_data(films="")
         sleep(5)
 
+
 @allure.title("Ввод в поле поиска только цифр")
 @allure.description("Тест проверяет поиск фильма(сериала), при вводе в поле поиска только цифр")
 @allure.severity(allure.severity_level.BLOCKER)
@@ -52,6 +54,7 @@ def test_only_numbers():
     with allure.step("Вызвать метод для поиска"): 
         search.input_only_numbers(films="547368769")
         sleep(5)
+
 
 
 @allure.title("Поиск фильмов(сериалов) по минимальной дате")
