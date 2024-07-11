@@ -122,8 +122,7 @@ def test_search_films_by_big_years_nigative():
             assert len(body) > 0
 
         with allure.step("Проверить, что значение ключа 'message' из списка 'body' равна\
-                         'Значение поля year должно быть в диапазоне от 1874 до 2050!'"
-                        ):
+                         'Значение поля year должно быть в диапазоне от 1874 до 2050!'"):
             assert body['message'] == ['Значение поля year должно быть в диапазоне от 1874 до 2050!']
 
 

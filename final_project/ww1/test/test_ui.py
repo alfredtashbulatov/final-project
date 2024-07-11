@@ -81,7 +81,7 @@ def test_search_max_year():
     with allure.step("Инициализировать браузер"):
         browser = webdriver.Chrome()
 
-    with allure.step("Передать браузер в конструктор класса Search_films_and_TV_series"):
+    with allure.step("Передать браузер в конструктор класса Searchfilms_and_TV_series"):
         search = Search_films_and_TV_series(browser)
 
     with allure.step("Вызвать метод для поиска"): 
