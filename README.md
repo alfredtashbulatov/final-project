@@ -1,14 +1,21 @@
 Для получения cookie необходимо импортировать json.
-Выполнить вход в систему.
-Сохранить cookie в файл используя(
-cookies = browser.get_cookies()
-with open('cookies.json', 'w') as file:
-json.dump(cookies, file))
+from selenium import webdriver
+import json
 
-Для последующего использования испотзовать(
+# Сохраняем куки
+driver = webdriver.Chrome()
+driver.get('https://example.com/login')
+# Здесь происходит вход в систему
+cookies = driver.get_cookies()
+with open('cookies.json', 'w') as file:
+    json.dump(cookies, file)
+
+# Загружаем куки для повторного входа
+driver = webdriver.Chrome()
+driver.get('https://example.com')
 with open('cookies.json', 'r') as file:
     cookies = json.load(file)
     for cookie in cookies:
-        browser.add_cookie(cookie))
-
+        driver.add_cookie(cookie)
+driver.refresh()
 
